@@ -69,6 +69,47 @@
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url | bust_css_cache }}">
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
+{%- if page.url == "/" or page.permalink == "/" -%}
+<!-- Structured data: Person (Marc Huertas-Company) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://mhuertascompany.github.io/#me",
+  "name": "Marc Huertas-Company",
+  "alternateName": "Marc Huertas-Company",
+  "givenName": "Marc",
+  "familyName": "Huertas-Company",
+  "image": "{{ '/assets/img/profile.jpg' | absolute_url }}",
+  "jobTitle": "Astrophysicist; Research Scientist",
+  "affiliation": [
+    { "@type": "Organization", "name": "Instituto de Astrofísica de Canarias (IAC)", "url": "https://www.iac.es/" },
+    { "@type": "Organization", "name": "Paris Observatory", "url": "https://www.observatoiredeparis.psl.eu/" },
+    { "@type": "Organization", "name": "University of California Santa Cruz", "url": "https://www.ucsc.edu" }
+  ],
+  "worksFor": { "@type": "Organization", "name": "Instituto de Astrofísica de Canarias (IAC)", "url": "https://www.iac.es/" },
+  "address": { "@type": "PostalAddress", "addressCountry": "ES", "addressRegion": "Canary Islands", "addressLocality": "La Laguna" },
+  "url": "{{ '/' | absolute_url }}",
+  "sameAs": [
+    "https://scholar.google.com/citations?user=KhzeAYkAAAAJ&hl",
+    "https://orcid.org/0000-0002-1416-8483",
+    "https://www.wikidata.org/wiki/Q114434097",
+    "https://ui.adsabs.harvard.edu/search/q=author%3A%22Huertas-Company%2C%20M%22",
+    "https://github.com/mhuertascompany"
+  ],
+  "knowsAbout": [
+    "Galaxy formation",
+    "Morphology of galaxies",
+    "Euclid mission",
+    "Machine learning for astrophysics",
+    "Simulation-based inference",
+    "Multimodal representation learning"
+  ]
+}
+</script>
+{%- endif -%}
+
+
 <!-- Dark Mode -->
 <script src="{{ '/assets/js/theme.js' | relative_url | bust_file_cache }}"></script>
 {% if site.enable_darkmode %}
