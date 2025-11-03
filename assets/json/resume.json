@@ -47,6 +47,17 @@
 
   ],
   "education": [
+
+     {
+      "institution": "Université Paris-Cité",
+      "location": "Paris, France",
+      "url": "https://u-paris.fr/",
+      "area": "Astronomy and Astrophysics",
+      "studyType": "HDR [habilitation à diriger des recherches]",
+      "startDate": "2013",
+      "endDate": "2013"
+    }
+
     {
       "institution": "Paris Observatory",
       "location": "Paris, France",
