@@ -56,7 +56,7 @@
       "studyType": "HDR [habilitation à diriger des recherches]",
       "startDate": "2013",
       "endDate": "2013"
-    }
+    },
 
     {
       "institution": "Paris Observatory",
@@ -70,7 +70,7 @@
   ],
   "publications": [{
     "name":"Publication list (NASA ADS)",
-    "summary": "140+ refereed papers, ~8000+ citations, 37 papers first (17) or second (20) author w/ students and postdocs, 4 first author papers with more than 100 citations, most cited first author paper: 200 citations, H-index ~ 50, i-100 = 15",
+    "summary": "170+ refereed papers, ~12k+ citations, 37 papers first (17) or second (20) author w/ students and postdocs, 5 first author papers with more than 100 citations, most cited first author paper: 240+ citations, H-index ~ 55, i-100 = 15",
     "url": "https://ui.adsabs.harvard.edu/search/filter_database_fq_database=OR&filter_database_fq_database=database%3A%22astronomy%22&format=SHORT&fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3A%22astronomy%22)&q=%22huertas-company%22&sort=citation_count%20desc%2C%20bibcode%20desc&unprocessed_parameter=adsobj_query&unprocessed_parameter=qform&p_=0"
   }],
 
