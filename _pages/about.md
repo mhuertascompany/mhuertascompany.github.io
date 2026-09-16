@@ -13,7 +13,7 @@ profile:
     <p>Tenerife, Spain</p>
 
 #news: false # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: true # shows the five newest publications from the bibliography
 social: true # includes social icons at the bottom of the page
 ---
 
