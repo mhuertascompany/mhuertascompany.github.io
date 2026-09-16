@@ -17,7 +17,8 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Staff research scientist and group leader at the Instituto de Astrofísica de Canarias (Spain), Associate Professor - on leave - at the University of Paris and the Paris Observatory (France). 
+Staff research scientist and leader of the [IA2 group](https://iacdeep.github.io/home/) at the Instituto de Astrofísica de Canarias (Spain), Associate Professor - on leave - at the University of Paris and the Paris Observatory (France).
+
+I am currently on sabbatical at [Polymathic AI](https://polymathic-ai.org/).
 
 Trying to leverage the latest AI advances to learn a bit more about how galaxies form and evolve. Working with amazing observing facilities such as [Euclid](https://www.esa.int/Science_Exploration/Space_Science/Euclid) and [JWST](https://science.nasa.gov/mission/webb/).
-
