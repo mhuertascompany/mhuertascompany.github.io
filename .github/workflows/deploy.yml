@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - "assets/**"
+      - "bin/**"
       - "**.bib"
       - "**.html"
       - "**.js"
@@ -34,6 +35,7 @@ on:
       - main
     paths:
       - "assets/**"
+      - "bin/**"
       - "**.bib"
       - "**.html"
       - "**.js"
@@ -86,6 +88,13 @@ jobs:
           python -m pip install -r bin/publications-requirements.txt
           python -m unittest discover -s bin -p 'test_publications.py'
           python bin/update_publications.py
+      - name: Update CV bibliometrics from NASA ADS
+        if: github.event_name != 'pull_request'
+        env:
+          ADS_API_TOKEN: ${{ secrets.ADS_API_TOKEN }}
+        run: |
+          python -m unittest discover -s bin -p 'test_ads_metrics.py'
+          python bin/update_ads_metrics.py --if-configured
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:
@@ -103,14 +112,17 @@ jobs:
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
-      - name: Save publication updates
-        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+      - name: Save publication and bibliometric updates
+        if: github.event_name != 'pull_request'
         run: |
-          if ! git diff --quiet -- _bibliography/papers.bib; then
+          git add _bibliography/papers.bib
+          if [ -f _data/ads_metrics.json ]; then
+            git add _data/ads_metrics.json
+          fi
+          if ! git diff --cached --quiet; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add _bibliography/papers.bib
-            git commit -m "Update publications from arXiv"
+            git commit -m "Update publications and NASA ADS bibliometrics"
             git push
           fi
       - name: Deploy 🚀

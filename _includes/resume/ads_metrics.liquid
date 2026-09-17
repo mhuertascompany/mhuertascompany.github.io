@@ -1,0 +1,13 @@
+{% assign metrics = site.data.ads_metrics %}
+{% if metrics %}
+  <div class="mt-3">
+    <p><a href="{{ metrics.source_url }}">NASA ADS bibliometrics</a> · Updated {{ metrics.updated | date: '%-d %B %Y' }}</p>
+    <dl class="row mb-2">
+      <dt class="col-8">Refereed papers</dt><dd class="col-4">{{ metrics.papers }}</dd>
+      <dt class="col-8">Citations</dt><dd class="col-4">{{ metrics.citations }}</dd>
+      <dt class="col-8">h-index</dt><dd class="col-4">{{ metrics.h_index }}</dd>
+      <dt class="col-8">Papers with at least 100 citations</dt><dd class="col-4">{{ metrics.i100 }}</dd>
+    </dl>
+    <p class="small mb-0">Based on refereed astronomy papers indexed by NASA ADS. Citation counts include self-citations.</p>
+  </div>
+{% endif %}

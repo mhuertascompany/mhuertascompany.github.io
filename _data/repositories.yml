@@ -1,7 +1,9 @@
 github_users:
   - mhuertascompany
 
-repo_description_lines_max: 2
+descriptions:
+  mhuertascompany/ceers: Code and notebooks for analysing JWST CEERS galaxy images, including morphology and bar measurements.
+  MultimodalUniverse/MultimodalUniverse: A large-scale collection of multimodal astronomical datasets for machine learning.
 
 github_repos:
   - mhuertascompany/ceers
